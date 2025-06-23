@@ -1,4 +1,4 @@
-package com.ait.qa60;
+package com_ait_qa60;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,9 +19,9 @@ public class FirstSeleniumTest {
         // maximize browser to window
         driver.manage().window().maximize();
 
-        // wait for all elements
 
         driver.navigate().to("https://ilcarro.web.app/search"); // with history
+        // wait for all elements
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("https://www.google.com");
         driver.navigate().back();
