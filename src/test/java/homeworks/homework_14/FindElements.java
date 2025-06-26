@@ -58,14 +58,11 @@ public class FindElements {
 
     @Test
     public void findElementByXpath() {
-        WebElement element = driver.findElement(By.xpath("//p[contains(.,'Tricentis')]"));
-        System.out.println("Test 1: " + element.getText());
-
-        WebElement element2 = driver.findElement(By.xpath("//input[@class='button-2 vote-poll-button']"));
-        WebElement element3 = driver.findElement(By.xpath("//strong[.='Featured products']"));
-        WebElement element4 = driver.findElement(By.xpath("//div[starts-with(@id, 'newsletter-sub')]"));
-        List<WebElement> elements = driver.findElements(By.xpath("//ul/parent::*"));
-
+        driver.findElement(By.xpath("//p[contains(.,'Tricentis')]"));
+        driver.findElement(By.xpath("//input[@class='button-2 vote-poll-button']"));
+        driver.findElement(By.xpath("//strong[.='Featured products']"));
+        driver.findElement(By.xpath("//div[starts-with(@id, 'newsletter-sub')]"));
+        driver.findElements(By.xpath("//ul/parent::*"));
         driver.findElement(By.xpath("//form/ancestor::div[1]"));
         driver.findElement(By.xpath("//ul/following-sibling::div[1]"));
         driver.findElement(By.xpath("//ul/preceding-sibling::ul"));
