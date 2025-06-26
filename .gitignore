@@ -18,3 +18,5 @@ gradlew/
 gradlew.bat
 *.log
 *.png
+LICENSE
+build.gradle
