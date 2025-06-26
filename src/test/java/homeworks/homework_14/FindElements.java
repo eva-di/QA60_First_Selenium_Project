@@ -62,25 +62,18 @@ public class FindElements {
         System.out.println("Test 1: " + element.getText());
 
         WebElement element2 = driver.findElement(By.xpath("//input[@class='button-2 vote-poll-button']"));
-        System.out.println("Test 2: " + element2.getAccessibleName());
-
         WebElement element3 = driver.findElement(By.xpath("//strong[.='Featured products']"));
-        System.out.println("Test 3:" + element3.getText());
-
         WebElement element4 = driver.findElement(By.xpath("//div[starts-with(@id, 'newsletter-sub')]"));
-        System.out.println("Test 4: " + element4.getText());
-
         List<WebElement> elements = driver.findElements(By.xpath("//ul/parent::*"));
-        System.out.println("Test 5: " + elements.size());
-        
 
         driver.findElement(By.xpath("//form/ancestor::div[1]"));
         driver.findElement(By.xpath("//ul/following-sibling::div[1]"));
         driver.findElement(By.xpath("//ul/preceding-sibling::ul"));
         driver.findElement(By.xpath("//img[@alt='Tricentis Demo Web Shop']/.."));
         driver.findElement(By.xpath("//img/ancestor::*[1]"));
+        driver.findElement(By.cssSelector("div:nth-child(2)>div>div>div>ul"));
 
-//      WebElement element5 = driver.findElement(By.xpath("//h1/ancestor::div[1]")); // SelectorHub находит, в Java падает...
+//      driver.findElement(By.xpath("//h1/ancestor::div[1]")); // SelectorHub находит, в Java падает...
 
 
 
