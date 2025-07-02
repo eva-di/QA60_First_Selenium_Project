@@ -1,8 +1,10 @@
 package com.ait.qa60;
 
+import com.demo_web_shop.data.ProductData;
+import com.demo_web_shop.data.UserData;
 import com.demo_web_shop.models.Product;
 import com.demo_web_shop.models.User;
-import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,20 +17,15 @@ public class AddItemToCartTests extends TestBase {
     @BeforeMethod
     public void preCondition(){
 
-        if (!app.getUser().isLoginLinkPresent()) {
-            app.getUser().clickOnLogOutLink();
-        app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginForm(new User().setEmail("sarah27@gmail.com").setPassword("Qa12345!"));
-        app.getUser().clickOnLoginButton();
-        }
-
-
+            app.getUser().clickOnLoginLink();
+            app.getUser().fillLoginForm(new User().setEmail(UserData.LOGIN).setPassword(UserData.PASSWORD));
+            app.getUser().clickOnLoginButton();
     }
 
     @Test
     public void addItemToCartPositiveTest() {
         app.getProduct().clickOnSecondItemLink();
-        app.getProduct().enterQuantityOfItem(new Product().setQuantity("1"));
+        app.getProduct().enterQuantityOfItem(new Product().setQuantity(ProductData.QUANTITY));
         app.getProduct().clickOnAddToCartButton();
         app.getProduct().clickOnShoppingCartLink();
 //        softAssert.assertTrue(isElementPresent(By.xpath("//div[@id='bar-notification']//p[contains(., " +

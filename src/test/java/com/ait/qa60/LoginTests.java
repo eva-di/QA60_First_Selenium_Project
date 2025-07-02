@@ -1,5 +1,6 @@
 package com.ait.qa60;
 
+import com.demo_web_shop.data.UserData;
 import com.demo_web_shop.models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ public class LoginTests extends TestBase {
     public void loginPositiveTest() {
 
         app.getUser().clickOnLoginLink();
-        app.getUser().fillLoginForm(new User().setEmail("sarah27@gmail.com").setPassword("Qa12345!"));
+        app.getUser().fillLoginForm(new User().setEmail(UserData.LOGIN).setPassword(UserData.PASSWORD));
         app.getUser().clickOnRememberMeCheckBox();
         app.getUser().clickOnLoginButton();
 
