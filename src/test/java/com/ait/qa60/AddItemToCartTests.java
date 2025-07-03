@@ -4,7 +4,6 @@ import com.demo_web_shop.data.ProductData;
 import com.demo_web_shop.data.UserData;
 import com.demo_web_shop.models.Product;
 import com.demo_web_shop.models.User;
-import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
