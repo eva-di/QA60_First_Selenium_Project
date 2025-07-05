@@ -12,7 +12,6 @@ public class AddItemToCartTests extends TestBase {
 
 //   SoftAssert softAssert = new SoftAssert();
 
-
     @BeforeMethod
     public void preCondition(){
 
